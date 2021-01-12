@@ -1,9 +1,8 @@
 from advertising.base_advertising import BaseAdvertising
 
-total_clicks = 0
-
 
 class Advertiser(BaseAdvertising):
+    total_clicks = 0
 
     def __init__(self, id, name):
         super(Advertiser, self).__init__(id)
@@ -26,9 +25,9 @@ class Advertiser(BaseAdvertising):
 
     @staticmethod
     def get_total_clicks():
-        return total_clicks
+        return Advertiser.total_clicks
 
-    # TODO
+
     def inc_clicks(self):
         super().inc_clicks()
-        total_clicks += 1
+        Advertiser.total_clicks += 1
