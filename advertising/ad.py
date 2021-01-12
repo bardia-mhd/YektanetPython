@@ -50,6 +50,5 @@ class Ad(BaseAdvertising):
         self._advertiser.inc_views()
         self._views += 1
 
-
     def describe_me(self):
-        return "return Ad with id:" + self._id
+        return "Ad with id:" + str(self._id)
