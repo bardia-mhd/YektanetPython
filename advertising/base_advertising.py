@@ -1,7 +1,4 @@
-import abc
-
-
-class BaseAdvertising(abc.ABC):
+class BaseAdvertising:
 
     def __init__(self, id):
         self._id = id
@@ -24,7 +21,6 @@ class BaseAdvertising(abc.ABC):
     def views(self, value):
         self._views = value
 
-    @abc.abstractmethod
     def describe_me(self):
         return "This is base advertise class"
 
